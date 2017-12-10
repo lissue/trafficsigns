@@ -164,7 +164,7 @@ For all images, the model is very certain on the class of the traffic sign (prob
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
-![alt text][image3]
+![alt text][image5]
 Especially on the first layer, it's apparent that the network focused on the octagon shape of the stop sign, as well the characters on the sign.
 
 ### TODO
