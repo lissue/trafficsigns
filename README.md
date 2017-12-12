@@ -92,12 +92,12 @@ My final model was the LeNet-5 network with slight modification to accommodate t
 
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
-To train the model, I used an ....
+To train the model, I used the following for my model.
 | Parameter        		|     Value	        					        | 
 |:---------------------:|:---------------------------------------------:| 
 | Optimizer        		| AdamOptimizer        							| 
 | Batch size        	| 128                                        	|
-| # epochs				| 20											|
+| # epochs				| 15											|
 | Learning rate	      	| 0.001                          				|
 
 
