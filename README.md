@@ -77,7 +77,7 @@ My final model was the LeNet-5 network with slight modification to accommodate t
 | RELU					|												|
 | Max pooling	      	| 2x2 stride,  outputs 14x14x6   				|
 | Convolution 5x5	    | 1x1 stride, same padding, outputs 10x10x16	|
-| Relu                  |                                               |
+| RELU                  |                                               |
 | Max pooling	      	| 2x2 stride,  outputs 5x5x16   				|
 | Flatten   	      	| 5x5x16 = 400                     				|
 | Fully connected		| 120 outputs  									|
@@ -165,7 +165,9 @@ For all images, the model is very certain on the class of the traffic sign (prob
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
+
 ![alt text][image5]
+
 Especially on the first layer, it's apparent that the network focused on the octagon shape of the stop sign, as well the characters on the sign.
 
 ### TODO
