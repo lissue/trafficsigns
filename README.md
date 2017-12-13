@@ -110,23 +110,37 @@ My final model results were:
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
+
     I started with LeNet-5 as it already provided 89% validation accuracy when the sample set was fed to the network, without any modifications. With a goal of increasing the validation accuracy by 4%, it seemed reasonable to keep the same architecture and focus on tuning the hyperparameters. (As it turns out, I actually only applied preprocessing, and the model was already able to meet the requirement.)
+
 * What were some problems with the initial architecture?
+
     The initial architecture didn't utilize dropout, which seemed to be critical when the samples are less "binary" than the MNIST images.
+
 * How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
+
     The initial architecture seems to have overfitted the data. Without dropout, the network becomes more dependent on non-repeatable clues found in the training set. This gets worse when the training set population is unevenly distributed among the 43 classes: samples that lack diversity in quantity led to less robust results.
     By adding dropout, the network learns to always take repeatability into account, and focus on the traffic sign itself, which is more repeatable than other features that may be present in the image. This can be further enhanced by augmenting the samples in terms of transformations, noise, and motion blur, etc., which is on the to do list.
+
 * Which parameters were tuned? How were they adjusted and why?
-    I original increased the number of epochs to 20 from 10. But later found out the last 5 epochs didn't seem to help with improving the .
+
+    I original increased the number of epochs to 20 from 10. But later found out the last 5 epochs didn't seem to help with improving the accuracy. I'm not sure if further increase the number of epochs would actually help, will need to experiment and find out.
+
 * What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
+
     As stated above.
 
 If a well known architecture was chosen:
 * What architecture was chosen?
+
     I used the LeNet-5 network.
+
 * Why did you believe it would be relevant to the traffic sign application?
+
     The original application of the network has been for the classification of handwritten characters, thus it seemed to be suitable to classify traffic signs as well.
+
 * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
+
     The training, validation, and test accuracies are in approximate agreement, thus the model seems to be working well. 
  
 
